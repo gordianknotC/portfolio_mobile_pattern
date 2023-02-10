@@ -1,5 +1,5 @@
 <template lang="pug">
-section
+section.p-4
   p 於 period({{COUNTER.PERIOD}}) 可進行 {{COUNTER.PERIOD_RETRIES}} 次倒數
   p 於 span({{COUNTER.SPAN}}) 可進行 {{COUNTER.SPAN_RETRIES}} 次倒數
   hr
