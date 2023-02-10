@@ -1,0 +1,12 @@
+<svg id="Icon_Order" data-name="Icon / Order" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="Rectangle_358" data-name="Rectangle 358" width="24" height="24" fill="none"/>
+  <g id="Group_702" data-name="Group 702" transform="translate(-314.959 -157.056)">
+    <path id="Path_151" data-name="Path 151" d="M332.909,178.181a1.581,1.581,0,0,0,1.549-1.609V160.453a.391.391,0,0,0-.383-.4H322.435a.39.39,0,0,0-.383.4v13.616" fill="none" stroke="#1915bf" stroke-linecap="round" stroke-width="1.5"/>
+    <path id="Path_152" data-name="Path 152" d="M332.909,178.181a1.58,1.58,0,0,1-1.548-1.609v-2.234a.265.265,0,0,0-.259-.269H320.218a.265.265,0,0,0-.259.269v2.234a1.58,1.58,0,0,0,1.548,1.609Z" fill="none" stroke="#1915bf" stroke-linecap="round" stroke-width="1.5"/>
+    <g id="Group_425" data-name="Group 425">
+      <line id="Line_79" data-name="Line 79" x2="6" transform="translate(325.255 163.9)" fill="none" stroke="#1915bf" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_80" data-name="Line 80" x2="6" transform="translate(325.255 167.056)" fill="none" stroke="#1915bf" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_81" data-name="Line 81" x2="2.058" transform="translate(325.255 170.213)" fill="none" stroke="#1915bf" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

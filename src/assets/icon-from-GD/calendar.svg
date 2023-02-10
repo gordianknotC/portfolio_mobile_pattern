@@ -1,0 +1,9 @@
+<svg id="icon_calendar" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Group_4821" data-name="Group 4821" transform="translate(3.643 3.979)">
+    <rect id="Rectangle_2272" data-name="Rectangle 2272" width="13.172" height="11.708" rx="1" transform="translate(0 0.732)" fill="none" stroke="#d1d1d1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_586" data-name="Line 586" x2="13.172" transform="translate(0.366 4.025)" fill="none" stroke="#d1d1d1" stroke-width="1.5"/>
+    <line id="Line_587" data-name="Line 587" y1="1.464" transform="translate(3.293)" fill="none" stroke="#d1d1d1" stroke-linecap="round" stroke-width="1.5"/>
+    <line id="Line_588" data-name="Line 588" y1="1.464" transform="translate(9.879)" fill="none" stroke="#d1d1d1" stroke-linecap="round" stroke-width="1.5"/>
+  </g>
+  <rect id="Rectangle_2273" data-name="Rectangle 2273" width="20" height="20" fill="none"/>
+</svg>

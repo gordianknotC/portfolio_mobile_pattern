@@ -1,0 +1,24 @@
+
+export enum EErrorCode {
+  //
+  //      A P I G u a r d 有使用
+  //
+  ACCESS_TOKEN_MISSING=203,
+  ACCESS_TOKEN_EXPIRED=202,
+  INVALID_ACCESS_TOKEN=201,
+  DATA_MISSING = 102,
+  INVALID_PERMISSION=208,
+  USER_IS_BLOCK=205,
+
+  //
+  //      A P I G u a r d 無使用
+  //
+  USER_NOT_VERIFY=-1,
+  USER_ALREADY_EXIST = 206,
+  FUND_PASSWORD_IS_NOT_SET=213,
+  PASSWORD_IS_WRONG=212,
+  PAYLOAD_MISSING_KEY=152,
+  PAYLOAD_ERROR=150,
+  BASE_ERROR=1, // internal server error 500
+}
+

@@ -1,0 +1,7 @@
+<svg id="Icon_Clock" data-name="Icon / Clock" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Icon_feather-clock" data-name="Icon feather-clock" transform="translate(3 2)">
+    <path id="Path_1" data-name="Path 1" d="M22,12.5A9.5,9.5,0,1,1,12.5,3,9.5,9.5,0,0,1,22,12.5Z" transform="translate(-3 -3)" fill="#bfbfda"/>
+    <path id="Path_2" data-name="Path 2" d="M18,9v5.7l3.8,1.9" transform="translate(-8.5 -5.2)" fill="none" stroke="#2a2a83" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+  <rect id="Rectangle_2406" data-name="Rectangle 2406" width="24" height="24" fill="none"/>
+</svg>

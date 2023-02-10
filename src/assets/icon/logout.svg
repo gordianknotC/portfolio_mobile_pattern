@@ -1,0 +1,7 @@
+<svg id="Icon_Log_out" data-name="Icon / Log out" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_10129" data-name="Group 10129" transform="translate(-922.357 -173.5)">
+    <path id="Path_4509" data-name="Path 4509" d="M6.88,3.263l-2.716-3a.858.858,0,0,0-1.234,0l-2.714,3A.831.831,0,1,0,1.449,4.377l1.259-1.39v7.48a.831.831,0,1,0,1.663,0v-7.5L5.646,4.377a.827.827,0,0,0,.616.274A.831.831,0,0,0,6.88,3.263Z" transform="translate(941.871 182) rotate(90)" fill="#3acdec"/>
+    <path id="Path_4510" data-name="Path 4510" d="M932.137,180h-6.429v10.345h6.429" transform="translate(1.649 0.5)" fill="none" stroke="#3acdec" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+  </g>
+  <rect id="Rectangle_2419" data-name="Rectangle 2419" width="24" height="24" fill="none"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg id="Icon_Read_More" data-name="Icon / Read More" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon-arrow" transform="translate(0 23.5) rotate(-90)">
+    <rect id="Rectangle_324" data-name="Rectangle 324" width="24" height="24" rx="5" transform="translate(-0.5 0)" fill="none"/>
+    <g id="Group_1472" data-name="Group 1472" transform="translate(-0.531 -0.894)">
+      <path id="Path_40" data-name="Path 40" d="M0,0,3.875,3.875,0,7.749" transform="translate(16.715 9.519) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_156" data-name="Line 156" y1="7.286" transform="translate(12.651 5.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_157" data-name="Line 157" y1="6.072" transform="translate(16.294 15.215)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_159" data-name="Line 159" y1="4.858" transform="translate(12.651 16.43)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="Line_158" data-name="Line 158" y1="6.072" transform="translate(9.007 15.215)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

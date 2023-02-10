@@ -1,0 +1,12 @@
+<svg id="icon_delete" data-name="icon / delete" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Group_1241" data-name="Group 1241" transform="translate(3.872 3.057)">
+    <path id="Path_180" data-name="Path 180" d="M657.066,217.451v7.943a1.313,1.313,0,0,1-1.32,1.3h-6.269a1.313,1.313,0,0,1-1.321-1.3v-7.943" transform="translate(-646.701 -213.25)" fill="none" stroke="#b6b6b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_158" data-name="Line 158" x2="11.819" transform="translate(0 2.076)" fill="none" stroke="#b6b6b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <g id="Group_1240" data-name="Group 1240" transform="translate(4.422 4.623)">
+      <line id="Line_159" data-name="Line 159" y2="6.456" fill="none" stroke="#b6b6b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_160" data-name="Line 160" y2="6.456" transform="translate(2.976)" fill="none" stroke="#b6b6b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+    <path id="Rectangle_847" data-name="Rectangle 847" d="M1.793,0h1.6A1.793,1.793,0,0,1,5.187,1.793v.283a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V1.793A1.793,1.793,0,0,1,1.793,0Z" transform="translate(3.316)" fill="none" stroke="#b6b6b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+  <rect id="Rectangle_848" data-name="Rectangle 848" width="20" height="20" fill="none" opacity="0.53"/>
+</svg>
