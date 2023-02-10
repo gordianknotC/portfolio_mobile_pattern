@@ -47,7 +47,7 @@ import {
   reactive,
   toRefs
 } from "~/appCommon/base/vueTypes";
-import { roulette, rouletteRecord} from "~/types/apiTypes";
+import { RouletteRecord, rouletteRecord} from "~/types/apiTypes";
 import { assert } from "~/appCommon/extendBase/impls/utils/assert";
 import Sector from "~/components/Sector.vue";
 import BaseApi from "~/services/apiService";
@@ -79,8 +79,8 @@ export default defineComponent({
     };
 
     const state = reactive({
-      list: [] as roulette[], //  轉盤資料 list
-      wheelList: [] as roulette[],
+      list: [] as RouletteRecord[], //  轉盤資料 list
+      wheelList: [] as RouletteRecord[],
       prizesLength: 0, // 單片數量
       initialDegree: 90, // 開始指針位置
       targetDegree: 0, // 目的位置
@@ -173,7 +173,7 @@ export default defineComponent({
         }
 
         //最大獎底色 white
-    const bigPrize = (data: roulette[]) => {
+    const bigPrize = (data: RouletteRecord[]) => {
       let mostBig = Number(data[0].worth)
       for(let i = 0; i < data.length; i ++) { // 取得最大
         if(Number(data[i].worth) > mostBig){
@@ -216,13 +216,13 @@ export default defineComponent({
       wheelElt,
       spin,
       EStage,
-      getColor(item: roulette, idx: number) {
+      getColor(item: RouletteRecord, idx: number) {
         return item.firstPrize
           ? colors.firstPrize
           : //@ts-ignore
             colors[(idx % 4) as any];
       },
-      getFontColor(item: roulette) {
+      getFontColor(item: RouletteRecord) {
         return item.firstPrize ? "#000" : "#fff";
       },
       getSectorStyle(idx: number) {

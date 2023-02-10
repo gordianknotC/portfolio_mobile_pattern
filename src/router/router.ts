@@ -324,6 +324,8 @@ export function getAppRouter() {
     }
   }
 
+  console.log("routes:", routes);
+
   return createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes

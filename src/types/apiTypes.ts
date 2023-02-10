@@ -646,7 +646,7 @@ export type GetQuestImgRes = DataResponse<GetQuestImg[]>
 export type roulettePayload = {
   type: number
 }
-export type roulette = {
+export type RouletteRecord = {
   create_datetime: string
   end_datetime: string
   id: number
@@ -660,11 +660,11 @@ export type roulette = {
 
   firstPrize: boolean
 }
-export type rouletteRes = DataResponse<roulette[]>
+export type RouletteResponse = DataResponse<RouletteRecord[]>
 
 //GET /roulette/random
-export type rouletteRandomPayload = roulettePayload
-export type rouletteRandom = DataResponse<roulette>
+export type RouletteRandomPayload = roulettePayload
+export type RouletteRandom = DataResponse<RouletteRecord>
 
 // GET /roulette/record
 export type rouletteRecord = {
@@ -673,4 +673,4 @@ export type rouletteRecord = {
   username: string
   worth: string
 }
-export type rouletteRecordRes = DataResponse<rouletteRecord[]>
+export type RouletteRecordResponse = DataResponse<rouletteRecord[]>
