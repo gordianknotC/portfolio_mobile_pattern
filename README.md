@@ -1,3 +1,17 @@
+
+Branch 有四種 
+- github_version 
+    - 原碼最新
+    - fix BaseSpanCounter BasePeriodCounter
+    - fix SpinWheelDemo 
+    - 修正一些 fixme: temporary, 因 api server network error 的原由無法放上 demo
+- vue_spin_wheel
+    - 移除不必要檔
+    - env.gh-pages
+- otp_counter
+    - 移除不必要檔
+    - env.gh-pages
+
 # template
 
 ## Project setup
