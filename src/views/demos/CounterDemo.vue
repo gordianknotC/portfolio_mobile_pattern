@@ -1,8 +1,10 @@
 <template lang="pug">
 section.p-4
-  p 於 period({{COUNTER.PERIOD}}) 可進行 {{COUNTER.PERIOD_RETRIES}} 次倒數
-  p 於 span({{COUNTER.SPAN}}) 可進行 {{COUNTER.SPAN_RETRIES}} 次倒數
-  hr
+  section.my-2
+    h2.font-bold.text-xl.my-2 PeriodCounter+SpanCounter
+    p.text-sm 於 period({{COUNTER.PERIOD}}) 可進行 {{COUNTER.PERIOD_RETRIES}} 次倒數
+    p.text-sm 於 span({{COUNTER.SPAN}}) 可進行 {{COUNTER.SPAN_RETRIES}} 次倒數
+  hr.my-2
   h2.font-bold.text-xl.my-2 period counter
   pre counter        : {{counterText}}
   pre retires        : {{counter.state.retries}}
@@ -10,21 +12,21 @@ section.p-4
   pre exceed retries : {{counter.hasExceedMaxRetries.value}}
   pre enabled        : {{enabled}}
   pre canResend      : {{canResend}}
-  hr
+  hr.my-2
   h2.font-bold.text-xl.my-2 span counter
   pre counter     : {{spanCounterText}}
   pre retires     : {{counter.spanCounter.state.retries}}
   pre max retries : {{counter.spanCounter.state.maxTimes}}
 
-
-  van-button(@click="restart" :disabled="!canResend")
-    span.text restart
-  van-button(@click="reset")
-    span.text reset
-  van-button(@click="start")
-    span.text start
-  van-button(@click="continuum")
-    span.text continuum
+  section.py-4
+    van-button(@click="restart" :disabled="!canResend")
+      span.text restart
+    van-button(@click="reset")
+      span.text reset
+    van-button(@click="start")
+      span.text start
+    van-button(@click="continuum")
+      span.text continuum
 
 
 </template>
