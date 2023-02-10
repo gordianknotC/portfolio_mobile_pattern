@@ -1,11 +1,18 @@
 <template lang="pug">
 section
-  pre text           : {{counterText}}
+  p 於 period({{COUNTER.PERIOD}}) 可進行 span({{COUNTER.SPAN}}) 倒數
+
+  pre period counter : {{counterText}}
+  pre span counter   : {{spanCounterText}}
   pre retires        : {{counter.state.retries}}
   pre max retries    : {{counter.state.maxTimes}}
   pre exceed retries : {{counter.hasExceedMaxRetries.value}}
   pre enabled        : {{enabled}}
   pre canResend      : {{canResend}}
+
+  hr
+  pre retires(s)     : {{counter.spanCounter.state.retries}}
+  pre max retries(s) : {{counter.spanCounter.state.maxTimes}}
 
 
   van-button(@click="restart" :disabled="!canResend")
@@ -33,14 +40,24 @@ export default defineComponent({
   components: {
   },
   setup() {
-    APP_CONFIGS.DEFAULT_MODELS.COUNTER.SPAN = 11;
-    APP_CONFIGS.DEFAULT_MODELS.COUNTER.PERIOD = 11;
+    APP_CONFIGS.DEFAULT_MODELS.COUNTER.SPAN = 10;
+    APP_CONFIGS.DEFAULT_MODELS.COUNTER.SPAN_RETRIES = 2;
+    APP_CONFIGS.DEFAULT_MODELS.COUNTER.PERIOD = 30;
+    APP_CONFIGS.DEFAULT_MODELS.COUNTER.PERIOD_RETRIES = 3;
 
     const counter = new VerifyOTPPeriodCounter();
 
     const counterText = computed(()=>{
       const text =  counter.currentCounter.value;
       const enabled =  counter.counterEnabled.value;
+      if (enabled)
+        return `(${text})`;
+      return "";
+    });
+
+    const spanCounterText = computed(()=>{
+      const text =  counter.spanCounter.currentCounter.value;
+      const enabled =  counter.spanCounter.counterEnabled.value;
       if (enabled)
         return `(${text})`;
       return "";
@@ -75,8 +92,10 @@ export default defineComponent({
       console.groupEnd();
     })    ;
     return {
+      COUNTER: APP_CONFIGS.DEFAULT_MODELS.COUNTER,
       counter,
       counterText,
+      spanCounterText,
       exceedCounterText,
       enabled,
       canResend,

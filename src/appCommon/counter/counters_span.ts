@@ -6,6 +6,12 @@ import {TCounterState} from "~/appCommon/counter/counter_base_typedef";
 import {watchAndStore} from "~/appCommon/extendBase/impls/baseStorageService";
 
 
+export enum CounterStage {
+  counting,
+  startNewCount,
+  exceedMaxRetries,
+}
+
 export abstract class BaseSpanCounter extends BaseReactiveCounter implements IBaseSpanCounter{
   state: TCounterState & {
     maxTimes: number,
@@ -13,6 +19,7 @@ export abstract class BaseSpanCounter extends BaseReactiveCounter implements IBa
     retries: number,
   };
   hasExceedMaxRetries: ComputedRef<boolean>;
+  canStartNewCount: ComputedRef<boolean>;
   private storeKey: string;
 
   protected constructor(option: {
@@ -39,20 +46,31 @@ export abstract class BaseSpanCounter extends BaseReactiveCounter implements IBa
     this.hasExceedMaxRetries = computed(()=>{
       return this.state.retries > this.state.maxTimes;
     });
+    this.canStartNewCount = computed(()=>{
+      return this.state.retries < this.state.maxTimes;
+    });
 
     this.watchPropertyChange();
     console.log("Period:", this.state.span, "span:", option.span, "newState:", newState);
   }
 
-  start() {
-    this.state.retries++;
-    if (this.hasExceedMaxRetries.value) {
-      console.log('start: hasExceedMaxRetries');
-      this.onExceedMaxRetries();
-    } else {
-      console.log('start: new span');
-      if (this.onStartNewSpan()){
-        super.start(this.state.span);
+  // 返回是否 counting
+  start(): CounterStage {
+    if (!this.canStartNewCount.value && this.counterEnabled.value){
+      console.log("continue span counter, since not completed yet");
+      return CounterStage.counting;
+    }else{
+      this.state.retries++;
+      if (this.hasExceedMaxRetries.value) {
+        console.log('ban span counter, since hasExceedMaxRetries');
+        this.onExceedMaxRetries();
+        return CounterStage.exceedMaxRetries;
+      } else {
+        console.log('start span counter');
+        if (this.onStartNewSpan()){
+          super.start(this.state.span);
+        }
+        return CounterStage.startNewCount;
       }
     }
   }
@@ -119,7 +137,11 @@ export abstract class BaseSpanCounter extends BaseReactiveCounter implements IBa
       const startTime = new Date(Date.now()).getTime();
       const isWithinValidPeriod = startTime < this.state.counterRBound!;
       console.log('hasExceedMaxRetries', isWithinValidPeriod, startTime, this.state.counterRBound);
-      this.state.retries = Math.min(this.state.maxTimes + 1, this.state.retries);
+      if (this.counterEnabled.value){
+        // pass counter 繼續走
+      }else{
+        this.state.retries = Math.min(this.state.maxTimes + 1, this.state.retries);
+      }
     }else{
       console.log('hasExceedMaxRetries...');
     }

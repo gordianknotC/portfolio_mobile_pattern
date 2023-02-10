@@ -8,7 +8,7 @@ export interface IBaseSpanCounter extends IBaseReactiveCounter {
     retries: number,
   };
   hasExceedMaxRetries: ComputedRef<boolean>;
-
+  canStartNewCount: ComputedRef<boolean>;
   start(): void;
 
   reset(): Promise<any>;
