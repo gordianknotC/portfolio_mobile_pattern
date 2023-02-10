@@ -20,7 +20,8 @@ const VUE_APP_ASSETS_HOST = process.env.VUE_APP_ASSETS_HOST;
 const VUE_APP_VERSION = process.env.VUE_APP_VERSION;
 const VUE_APP_ENV = process.env.VUE_APP_ENV;
 const VUE_APP_SERVER_HOST = process.env.VUE_APP_SERVER_HOST;
-const VUE_APP_FB_TOKEN = process.env.VUE_APP_FB_TOKEN;
+// const VUE_APP_FB_TOKEN = process.env.VUE_APP_FB_TOKEN;
+const VUE_APP_PUBLIC_DIR = process.env.VUE_APP_PUBLIC_DIR;
 const SITE_NAME = 'BRANDING';
 
 const VUE_APP_MOBILE  = process.env.VUE_APP_MOBILE;
@@ -60,6 +61,7 @@ function customConfigsInit(){
 }
 
 console.log("-------- INFO --------");
+console.log(`VUE_APP_PUBLIC_DIR: ${VUE_APP_PUBLIC_DIR}`);
 console.log(`NODE_ENV       : ${NODE_ENV}`);
 console.log(`VUE_APP_ENV    : ${VUE_APP_ENV}`);
 console.log(`VUE_APP_TITLE  : ${VUE_APP_TITLE}`);
@@ -82,6 +84,7 @@ cypressInit();
 customConfigsInit();
 
 module.exports = {
+  publicPath: VUE_APP_PUBLIC_DIR,
   pwa: {
     name: SITE_NAME,
     themeColor: "#f0b90b",
@@ -183,7 +186,7 @@ module.exports = {
             VUE_APP_ENV: JSON.stringify(VUE_APP_ENV),
             VUE_APP_SERVER_HOST: JSON.stringify(VUE_APP_SERVER_HOST),
             VUE_APP_NAME: JSON.stringify(SITE_NAME),
-            VUE_APP_FB_TOKEN: JSON.stringify(VUE_APP_FB_TOKEN)
+            // VUE_APP_FB_TOKEN: JSON.stringify(VUE_APP_FB_TOKEN)
           }
         })
       ]

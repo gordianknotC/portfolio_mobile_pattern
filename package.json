@@ -12,6 +12,7 @@
     "prettier": "CYPRESS_INSTALL_BINARY=0 prettier --write 'src/**/*.vue' 'src/**/*.ts'",
     "production": "CYPRESS_INSTALL_BINARY=0 vue-cli-service build --mode production",
     "release": "CYPRESS_INSTALL_BINARY=0 vue-cli-service build --mode release",
+    "gh_pages": "CYPRESS_INSTALL_BINARY=0 vue-cli-service build --mode gh_pages",
     "tailwind": "npx tailwindcss build src/assets/css/tailwind.css -o .tailwind/tailwind.css",
     "app:develop"   : "VUE_APP_ENV=development VUE_APP_MOBILE=true ANDROID_SYNC=true vue-cli-service build",
     "app:release"   : "VUE_APP_ENV=release VUE_APP_MOBILE=true ANDROID_SYNC=true vue-cli-service build",

@@ -18,6 +18,8 @@ pnpm-debug.log*
 android
 ios
 gh-pages
+vue_spin_wheel
+otp_counter
 
 # Editor directories and files
 .idea
@@ -30,3 +32,4 @@ gh-pages
 
 # ignored
 /src/customConfig.ts
+/portfolio_mobile_pattern/
