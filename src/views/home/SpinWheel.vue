@@ -102,14 +102,10 @@ export default defineComponent({
     const spin = async () => {
       if (state.stage == EStage.spinning) return;
 
-      // const index = Math.min(Math.floor(Math.random() * 10), state.prizes - 1);
-      // const prize = state.list[index].item;
-      // console.log("prize", prize)
-
-      const luckyMan = await BaseApi.getRouletteRandom({type: 1})
-      // 取得後端判定的得獎資料
-      const prize = luckyMan.data.worth.toString() // 得獎金額
-      spinToPrize(prize);
+      const index = Math.min(Math.floor(Math.random() * 10), state.list.length - 1);
+      const prize = state.list[index];
+      console.log("prize", prize)
+      spinToPrize(prize.worth);
       setTimeout(async ()=>{
         await getRouletteRecord() // 更新得獎人列表
       }, 5000)
@@ -123,7 +119,7 @@ export default defineComponent({
       let acc = 0;
       const initialSpeed = 360 * 30 * state.counter;
       const targetIndex = state.list.findIndex(_ => _.worth == prize);
-      assert(targetIndex != -1, "prize not found");
+      assert(targetIndex != -1, `prize:${prize} not found in ${state.list}`);
 
       const startupIndex = state.list.findIndex(_ => {
         acc += span.value;

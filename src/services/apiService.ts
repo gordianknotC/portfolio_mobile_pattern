@@ -430,8 +430,8 @@ export class ApiService extends BaseApiService implements IBaseApiService {
     const record: rouletteRecord[] = [{
       create_datetime: "",
       record_id: 0,
-      username: "",
-      worth: ""
+      username: "Curtis",
+      worth: "1100"
     }];
     const response: RouletteRecordResponse = {data: record};
     return Promise.resolve(response);
