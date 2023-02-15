@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/portfolio_mobile_pattern/precache-manifest.9468e9ee2b6e71af3175e85d0e2211b0.js"
+  "/portfolio_mobile_pattern/precache-manifest.d671c26de8fbe7f402d342509fe19865.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "portfolio-branding"});
