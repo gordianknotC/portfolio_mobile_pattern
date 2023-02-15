@@ -33,3 +33,5 @@ otp_counter
 # ignored
 /src/customConfig.ts
 /portfolio_mobile_pattern/
+/_vue_spin_wheel/
+/_portfolio_mobile_pattern/
